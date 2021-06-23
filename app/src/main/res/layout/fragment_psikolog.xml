@@ -1,14 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.PsikologFragment">
+    tools:context=".fragment_menu.PsikologFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_title_list_psikolog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="List Psikolog"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/ivPsikolog1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="104dp"
+        android:src="@drawable/stres_sedang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNamaPsikolog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Nama Psikolog 1"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_list_psikolog" />
+
+    <TextView
+        android:id="@+id/tvDetailPsikolog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Detail Psikolog 1"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog1"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaPsikolog1" />
+
+
+    <ImageView
+        android:id="@+id/ivPsikolog2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/stres_sedang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog1" />
+
+    <TextView
+        android:id="@+id/tvNamaPsikolog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Nama Psikolog 2"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog2"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailPsikolog1" />
+
+
+    <TextView
+        android:id="@+id/tvDetailPsikolog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Detail Psikolog 2"
+        android:layout_marginTop="4dp"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaPsikolog2" />
+
+    <ImageView
+        android:id="@+id/ivPsikolog3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/stres_sedang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog2" />
+
+    <TextView
+        android:id="@+id/tvNamaPsikolog3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Nama Psikolog 3"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailPsikolog2" />
+
+    <TextView
+        android:id="@+id/tvDetailPsikolog3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Detail Psikolog 3"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/ivPsikolog3"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaPsikolog3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

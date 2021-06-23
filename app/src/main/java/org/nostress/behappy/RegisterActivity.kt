@@ -12,17 +12,17 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var auth : FirebaseAuth
-    var dataReference : DatabaseReference? = null
-    var database : FirebaseDatabase? = null
+    private lateinit var auth : FirebaseAuth
+//    var dataReference : DatabaseReference? = null
+//    var database : FirebaseDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         auth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance()
-        dataReference = database?.reference!!.child("profile")
+//        database = FirebaseDatabase.getInstance()
+//        dataReference = database?.getReference("profil")
 
         register_button_register.setOnClickListener {
             Register()
@@ -35,9 +35,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun Register(){
-        val username = username_edittext_register.text.toString()
-        val email = email_edittext_register.text.toString()
-        val password = password_edittext_register.text.toString()
+        val username = username_edittext_register.text.toString().trim()
+        val email = email_edittext_register.text.toString().trim()
+        val password = password_edittext_register.text.toString().trim()
 
         if(username.isEmpty() || email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Harap isi semua data", Toast.LENGTH_SHORT).show()
@@ -48,8 +48,14 @@ class RegisterActivity : AppCompatActivity() {
             .addOnCompleteListener{
                 if (!it.isSuccessful) return@addOnCompleteListener
 
+//                val currentUser = auth.currentUser
+//                val currentUserDb = dataReference?.child((currentUser?.uid!!))
+//                currentUserDb?.child("username")?.setValue(username_edittext_register.text.toString())
+//                currentUserDb?.child("email")?.setValue(email_edittext_register.text.toString())
+//                currentUserDb?.child("password")?.setValue(password_edittext_register.text.toString())
+                
                 Log.d("Registerakun","Successfully create user with uid : ${it.result?.user?.uid}")
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,LoginActivity::class.java))
                 finish()
             }
             .addOnFailureListener{

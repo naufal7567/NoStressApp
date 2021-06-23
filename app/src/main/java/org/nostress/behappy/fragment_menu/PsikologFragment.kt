@@ -1,4 +1,4 @@
-package org.nostress.behappy.fragment
+package org.nostress.behappy.fragment_menu
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
